@@ -39,11 +39,11 @@ def convert_to_iif(df):
         customer = "Walk In"
 
         # TRNS row: money received into bank
-        writer.writerow(["TRNS", "RECEIPT", date, bank_account, customer,
+        writer.writerow(["TRNS", "PAYMENT", date, bank_account, customer,
                          f"{amount:.2f}", docnum, "Imported Receipt"])
 
         # SPL row: reduce A/R
-        writer.writerow(["SPL", "RECEIPT", date, "Accounts Receivable", customer,
+        writer.writerow(["SPL", "PAYMENT", date, "Accounts Receivable", customer,
                          f"{-amount:.2f}", docnum, "Payment for receipt", "", "", "", "N", ""])
 
         writer.writerow(["ENDTRNS"])
