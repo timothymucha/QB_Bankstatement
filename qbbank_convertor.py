@@ -28,9 +28,9 @@ def convert_to_iif(df):
         payment_type = row['Payment type'].strip().lower()
 
         if payment_type == 'mpesa':
-            bank_account = 'Bank:M-Pesa'
+            bank_account = 'MPesa'
         elif payment_type == 'cash':
-            bank_account = 'Bank:Cash'
+            bank_account = 'Cash in Drawer'
         elif payment_type == 'visa card':
             bank_account = 'Bank:Visa'
         else:
