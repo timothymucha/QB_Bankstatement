@@ -67,7 +67,7 @@ if uploaded_file:
     df = pd.read_csv(uploaded_file)
     st.write("✅ Loaded Data Preview", df.head())
 
-    required_cols = {'Date', 'Receipt number', 'Net sales', 'Status', 'Payment Type'}
+    required_cols = {'Date', 'Receipt number', 'Net sales', 'Status', 'Payment type'}
     if not required_cols.issubset(set(df.columns)):
         st.error(f"Missing required columns: {required_cols - set(df.columns)}")
     else:
