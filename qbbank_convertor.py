@@ -33,7 +33,7 @@ def convert_to_iif(df):
 
         docnum = f"RCP-{str(row['Receipt number']).strip().replace(' ', '').replace('/', '-')}"
         amount = float(row['Net sales'])
-        payment_type = row['Payment Type'].strip().lower()
+        payment_type = row['Payment type'].strip().lower()
 
         if payment_type == 'mpesa':
             bank_account = 'Bank:M-Pesa'
